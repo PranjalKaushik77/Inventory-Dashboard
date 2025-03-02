@@ -1,0 +1,84 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 15, 23, 42;
+  --background-start-rgb: 248, 250, 252;
+  --background-end-rgb: 241, 245, 249;
+
+  /* Custom colors */
+  --primary: 37, 99, 235;
+  --secondary: 79, 70, 229;
+  --success: 34, 197, 94;
+  --warning: 234, 179, 8;
+  --danger: 239, 68, 68;
+  --info: 6, 182, 212;
+}
+
+.dark {
+  --foreground-rgb: 241, 245, 249;
+  --background-start-rgb: 15, 23, 42;
+  --background-end-rgb: 30, 41, 59;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(to bottom, rgb(var(--background-start-rgb)), rgb(var(--background-end-rgb)));
+  min-height: 100vh;
+}
+
+@layer components {
+  .card {
+    @apply rounded-xl border border-slate-200 bg-white shadow-sm transition-all duration-200 dark:border-slate-700 dark:bg-slate-800;
+  }
+
+  .card-body {
+    @apply p-6;
+  }
+
+  .card-title {
+    @apply text-xl font-bold text-slate-900 dark:text-white mb-4;
+  }
+
+  .btn {
+    @apply inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none;
+  }
+
+  .btn-primary {
+    @apply bg-blue-600 text-white hover:bg-blue-700 h-10 py-2 px-4;
+  }
+
+  .btn-secondary {
+    @apply bg-slate-100 text-slate-900 hover:bg-slate-200 dark:bg-slate-700 dark:text-slate-100 dark:hover:bg-slate-600;
+  }
+
+  .badge {
+    @apply inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2;
+  }
+
+  .badge-lg {
+    @apply px-3 py-1 text-sm;
+  }
+
+  .alert {
+    @apply relative w-full rounded-lg border p-4 [&>svg~*]:pl-7 [&>svg+div]:translate-y-[-3px] [&>svg]:absolute [&>svg]:left-4 [&>svg]:top-4 [&>svg]:text-foreground;
+  }
+
+  .alert-error {
+    @apply border-red-500/50 bg-red-500/10 text-red-500 dark:border-red-500/20 dark:bg-red-500/5 dark:text-red-400 [&>svg]:text-red-500;
+  }
+
+  .form-control {
+    @apply flex flex-col space-y-2;
+  }
+
+  .file-input {
+    @apply flex h-10 w-full rounded-md border border-slate-200 bg-white px-3 py-2 text-sm file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-slate-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 disabled:cursor-not-allowed disabled:opacity-50 dark:border-slate-700 dark:bg-slate-800 dark:placeholder:text-slate-400 dark:focus-visible:ring-blue-500;
+  }
+
+  .file-input-bordered {
+    @apply border-slate-300 dark:border-slate-600;
+  }
+}
+
