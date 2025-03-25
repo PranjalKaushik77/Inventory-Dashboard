@@ -14,18 +14,14 @@ interface ProductListsProps {
 }
 
 export default function ProductLists({ data }: ProductListsProps) {
-  // Function to send emails via Gmail compose window.
   const sendMails = (vendors: string[]) => {
-    // Remove duplicates.
     const uniqueVendors = Array.from(new Set(vendors));
-    // Build the Gmail compose URL using the BCC field (or 'to' field).
-    // Gmail compose URL: https://mail.google.com/mail/?view=cm&fs=1&to=email1,email2,...
+    
     const gmailComposeUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(uniqueVendors.join(','))}`;
-    // Open the Gmail compose window in a new tab.
+   
     window.open(gmailComposeUrl, "_blank");
   };
 
-  // The renderList function now includes a "Send Email" button.
   const renderList = (title: string, items: Product[], colorClass: string) => (
     <div className="card h-[400px] flex flex-col">
       <div className="card-body flex flex-col p-0">
