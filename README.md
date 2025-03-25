@@ -10,10 +10,15 @@ The **Inventory Status Analysis & Dashboard** is a real-time inventory tracking 
 ✅ **Interactive dashboard** – A clean and user-friendly UI for easy navigation.  
 ✅ **Separate frontend and backend** – Designed for modularity and performance.  
 
+## Screenshots
+![Untitled design](https://github.com/user-attachments/assets/83199eec-3568-4212-8ca5-b29e276fe766)
+![Untitled design (1)](https://github.com/user-attachments/assets/3f6fb5ac-cfd9-4150-8461-3d056ecfa21a)
+
+
 ## Tech Stack
 - **Frontend:** Next.js (React-based framework for fast UI rendering)
 - **Backend:** Python (Handles data processing and API calls)
-- **Deployment:** Cloud-based hosting for accessibility and scalability
+
 
 ## Installation & Setup
 ### Prerequisites
@@ -39,8 +44,7 @@ This will start the Next.js development server.
 ### Backend Setup
 ```sh
 cd backend
-pip install -r requirements.txt
-python app.py
+python main.py
 ```
 This will start the backend API server.
 
@@ -50,19 +54,12 @@ This will start the backend API server.
 3. If a part is in the **Critical region**, click the **Email Vendor** button to notify the supplier.
 4. Monitor stock trends and take necessary actions before shortages occur.
 
-## Deployment
-To deploy the project, you can use platforms like **Vercel** for the frontend and **Heroku** for the backend. Follow their respective documentation for deployment instructions.
 
 ## Future Improvements
 - **Automated alerts** for low-stock items.
 - **Integration with third-party inventory management tools**.
 - **Detailed analytics & reporting** for better decision-making.
 
-## Contributing
-1. Fork the repository.
-2. Create a new branch.
-3. Make your changes and test them.
-4. Submit a pull request.
 
 ## License
 This project is licensed under the MIT License.
